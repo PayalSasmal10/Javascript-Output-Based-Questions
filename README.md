@@ -1,5 +1,10 @@
 # JavaScript output-based interview questions
 
+## 🙌 Like this project?
+
+If you found this helpful, support the project by clicking the ⭐ button at the top of the repo!
+Your star motivates us to add more high-quality content 🌟✨
+
 ## Contributing Guidelines
 
 👉 Please ensure that your contributions adhere to the coding style and guidelines of this project.  
@@ -19,9 +24,9 @@ console.log(1 && 2);
 ```
 
 <details>
-  <summary>View Answer</summary>
+  <summary>🔍 Click to View Answer</summary>
 
-**Output:**
+🧾 **Output:**
 
 ```
 3
@@ -30,7 +35,7 @@ console.log(1 && 2);
 2
 ```
 
-**Explanation:**
+🧠 **Explanation:**
 
 - `0 || 3` → returns `3` because `0` is falsy, so it evaluates to the second operand (`3`).
 - `1 || 2` → returns `1` because `1` is truthy, so it evaluates to the first operand.
@@ -49,15 +54,15 @@ console.log(+f + a + 1);
 ```
 
 <details>
-  <summary>View Answer</summary>
+  <summary>🔍 Click to View Answer</summary>
 
-**Output:**
+🧾 **Output:**
 
 ```
 7
 ```
 
-**Explanation:**
+🧠 **Explanation:**
 
 - `let f = "2";` — `f` is a string `"2"`.
 - `+f` — the unary plus converts the string `"2"` to the number `2`.
