@@ -68,3 +68,28 @@ console.log(+f + a + 1);
 - `+f` — the unary plus converts the string `"2"` to the number `2`.
 - `+f + a + 1` → `2 + 4 + 1` → `7`.
 </details>
+
+#
+
+3. What will be the output
+
+```javascript
+const a = (1, 2, 3);
+console.log(a);
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+3
+```
+
+🧠 **Explanation:**
+
+- The comma operator evaluates each of its operands (from left to right) and returns the value of the last operand.
+- `(1, 2, 3)` evaluates to `3`.
+- So, `a` is assigned the value `3`, and `console.log(a);` prints `3`.
+</details>
