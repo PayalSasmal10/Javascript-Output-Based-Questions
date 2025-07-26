@@ -37,3 +37,29 @@ console.log(1 && 2);
 - `0 && 1` → returns `0` because `0` is falsy, so `&&` returns the first falsy operand.
 - `1 && 2` → returns `2` because both are truthy, so `&&` returns the last operand.
 </details>
+
+#
+
+2. What will be the output
+
+```javascript
+let f = "2";
+let a = 4;
+console.log(+f + a + 1);
+```
+
+<details>
+  <summary>View Answer</summary>
+
+**Output:**
+
+```
+7
+```
+
+**Explanation:**
+
+- `let f = "2";` — `f` is a string `"2"`.
+- `+f` — the unary plus converts the string `"2"` to the number `2`.
+- `+f + a + 1` → `2 + 4 + 1` → `7`.
+</details>
