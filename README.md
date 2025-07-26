@@ -1,7 +1,39 @@
 # JavaScript output-based interview questions
 
-Contribution Guidelines
-👉 Please ensure that your contributions adhere to the coding style and guidelines of this project
-👉 Include clear and concise commit messages for all your commits
-👉 Provide a detailed description of your changes in the pull request.
+## Contributing Guidelines
+
+👉 Please ensure that your contributions adhere to the coding style and guidelines of this project.  
+👉 Include clear and concise commit messages for all your commits.  
+👉 Provide a detailed description of your changes in the pull request.  
 👉 Be respectful and considerate towards other contributors.
+
+##
+
+1. What will be the output
+
+```javascript
+console.log(0 || 3);
+console.log(1 || 2);
+console.log(0 && 1);
+console.log(1 && 2);
+```
+
+<details>
+  <summary>View Answer</summary>
+
+**Output:**
+
+```
+3
+1
+0
+2
+```
+
+**Explanation:**
+
+- `0 || 3` → returns `3` because `0` is falsy, so it evaluates to the second operand (`3`).
+- `1 || 2` → returns `1` because `1` is truthy, so it evaluates to the first operand.
+- `0 && 1` → returns `0` because `0` is falsy, so `&&` returns the first falsy operand.
+- `1 && 2` → returns `2` because both are truthy, so `&&` returns the last operand.
+</details>
