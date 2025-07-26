@@ -8,7 +8,7 @@ Your star motivates us to add more high-quality content 🌟✨
 ## Contribution Guidelines
 
 If you want to contribute, improve, or suggest changes to this repo, then check out the
-[Contributing Guide](https://github.com/PayalSasmal10/Javascript-Output-Based-Questions/main/CONTRIBUTING.md)
+[Contributing Guide](https://github.com/PayalSasmal10/Javascript-Output-Based-Questions/blob/main/CONTRIBUTING.md)
 
 ##
 
