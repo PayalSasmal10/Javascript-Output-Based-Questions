@@ -5,12 +5,10 @@
 If you found this helpful, support the project by clicking the ⭐ button at the top of the repo!
 Your star motivates us to add more high-quality content 🌟✨
 
-## Contributing Guidelines
+## Contribution Guidelines
 
-👉 Please ensure that your contributions adhere to the coding style and guidelines of this project.  
-👉 Include clear and concise commit messages for all your commits.  
-👉 Provide a detailed description of your changes in the pull request.  
-👉 Be respectful and considerate towards other contributors.
+If you want to contribute, improve, or suggest changes to this repo, then check out the
+[Contributing Guide](https://github.com/PayalSasmal10/Javascript-Output-Based-Questions/main/CONTRIBUTING.md)
 
 ##
 
