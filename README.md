@@ -91,3 +91,34 @@ console.log(a);
 - `(1, 2, 3)` evaluates to `3`.
 - So, `a` is assigned the value `3`, and `console.log(a);` prints `3`.
 </details>
+
+#
+
+4. What will be the output
+
+```javascript
+function multiple(x, y) {
+  return x * y;
+}
+let multi = multiple.bind(this, 7);
+console.log(multi(6));
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+42
+```
+
+🧠 **Explanation:**
+
+**bind(this, 7) creates a new function where:**
+
+- this is explicitly set (in this case to the current this)
+- First argument x is pre-filled with 7
+- You need to pass only the second argument y
+- this inside multiple is not used, so its value doesn't matter for the output.
+</details>
