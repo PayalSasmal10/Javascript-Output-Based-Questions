@@ -122,3 +122,53 @@ console.log(multi(6));
 - You need to pass only the second argument y
 - this inside multiple is not used, so its value doesn't matter for the output.
 </details>
+
+#
+
+5. What will be the output
+
+```javascript
+let i = 0;
+for (i = 0; i < 3; i++) {
+  const log = () => {
+    console.log(i);
+  };
+  setTimeout(log, 100);
+}
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+3
+3
+3
+```
+
+🧠 **Explanation:**
+
+- let i = 0; for (i = 0; i < 3; i++) {...} runs the loop 3 times with i = 0, 1, 2.
+
+- Inside the loop, a new function log is created in each iteration, capturing the same i from outer scope.
+
+- The function log is scheduled using setTimeout(..., 100), which executes after the loop has finished.
+
+- By the time all three timeouts fire (after ~100ms), the value of i has already become 3.
+  So each call to log() prints 3.
+
+If you wanted it to print 0 1 2, you'd need to capture the value of i for each iteration using let inside the loop or IIFE:
+
+```javascript
+for (let i = 0; i < 3; i++) {
+  const log = () => {
+    console.log(i);
+  };
+  setTimeout(log, 100);
+}
+// Output: 0 1 2
+```
+
+</details>
