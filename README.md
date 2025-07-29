@@ -172,3 +172,32 @@ for (let i = 0; i < 3; i++) {
 ```
 
 </details>
+
+6. What will be the output
+
+```javascript
+console.log({} == {});
+console.log({} === {});
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+false
+false
+```
+
+🧠 **Explanation:**
+
+In JavaScript, objects are compared by reference, not by value.
+
+- {} creates a new object each time.
+  So, {} == {} → comparing two different object references → false.
+
+- {} === {} → strict equality also compares reference still false.
+
+- They're not the same object in memory, even though they have the same structure (i.e., empty).
+</details>
