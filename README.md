@@ -173,6 +173,8 @@ for (let i = 0; i < 3; i++) {
 
 </details>
 
+#
+
 6. What will be the output
 
 ```javascript
@@ -201,3 +203,232 @@ In JavaScript, objects are compared by reference, not by value.
 
 - They're not the same object in memory, even though they have the same structure (i.e., empty).
 </details>
+
+#
+
+7. What will be the output
+
+```javascript
+console.log(typeof isNaN);
+console.log(isNaN === isNaN);
+
+console.log(typeof NaN);
+console.log(NaN === NaN);
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+"function"
+true
+"number"
+false
+```
+
+🧠 **Explanation:**
+
+- `typeof isNaN` returns `"function"` because `isNaN` is a built-in function.
+- `isNaN === isNaN` is `true` because both refer to the same function.
+- `typeof NaN` returns `"number"` because NaN is a special numeric value.
+- `NaN === NaN` is `false` because NaN is not equal to anything, even itself.
+</details>
+
+#
+
+8. What will be the output
+
+```javascript
+let a = [1, 2, 3];
+let b = a;
+b.push(4);
+console.log(a);
+console.log(b);
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+[1, 2, 3, 4]
+[1, 2, 3, 4]
+```
+
+🧠 **Explanation:**
+
+- Arrays are reference types. `b` points to the same array as `a`.
+- Pushing to `b` also changes `a`.
+</details>
+
+#
+
+9. What will be the output
+
+```javascript
+console.log(x);
+var x = 10;
+if (true) {
+  console.log(x);
+  let y = 5;
+}
+console.log(y); 
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+undefined
+10
+ReferenceError: y is not defined
+```
+
+🧠 **Explanation:**
+
+- `var x` is hoisted, so `console.log(x)` before assignment is `undefined`.
+- Inside the block, `x` is `10`.
+- `let y` is block-scoped, so `console.log(y)` outside the block throws an error.
+</details>
+
+#
+
+10. What will be the output
+
+```javascript
+console.log(typeof null);
+console.log(null instanceof Object);
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+"object"
+false
+```
+
+🧠 **Explanation:**
+
+- `typeof null` returns `"object"` (quirk in JS).
+- `null` is not an instance of `Object`.
+</details>
+
+#
+
+11. What will be the output
+
+```javascript
+const obj = {
+  name: "Heer",
+  greet: function () {
+    console.log(this.name);
+    console.log(`My name is ${this.name}`);
+  },
+};
+
+const greet = obj.greet;
+greet(); 
+
+obj.greet();
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+undefined
+My name is undefined
+Heer
+My name is Heer
+```
+
+🧠 **Explanation:**
+
+- When `greet` is called standalone, `this` is `undefined` (or global object in non-strict mode).
+- When called as `obj.greet()`, `this` refers to `obj`.
+</details>
+
+#
+
+12. What will be the output
+
+```javascript
+// Class based output
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+
+const p = new Person("Heer");
+p.greet();
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+Hello, my name is Heer
+```
+
+🧠 **Explanation:**
+
+- The class constructor sets the name.
+- `greet()` prints the name.
+</details>
+
+#
+
+13. What will be the output
+
+```html
+<div id="parent">
+  <button id="child">Child</button>
+</div>
+```
+
+```javascript
+const parentEle = document.getElementById("parent");
+const childEle = document.getElementById("child");
+
+parentEle.onclick = function () {
+  console.log("Hello from parent");
+};
+
+childEle.onclick = function () {
+  console.log("Hello from child");
+};
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+Clicking the button logs "Hello from child".
+Clicking elsewhere in the parent logs "Hello from parent".
+```
+
+🧠 **Explanation:**
+
+- Each element has its own click handler.
+- Clicking the child triggers only the child's handler.
+</details>
+
+#
