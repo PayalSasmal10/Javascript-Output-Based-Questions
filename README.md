@@ -275,7 +275,7 @@ if (true) {
   console.log(x);
   let y = 5;
 }
-console.log(y); 
+console.log(y);
 ```
 
 <details>
@@ -335,7 +335,7 @@ const obj = {
 };
 
 const greet = obj.greet;
-greet(); 
+greet();
 
 obj.greet();
 ```
@@ -430,5 +430,39 @@ Clicking elsewhere in the parent logs "Hello from parent".
 - Each element has its own click handler.
 - Clicking the child triggers only the child's handler.
 </details>
+
+#
+
+14. What will be the output
+
+```javascript
+function multiple(x, y) {
+  return x * y;
+}
+
+let multi = multiple.bind(this, 7);
+console.log(multi(6));
+```
+
+<details>
+  <summary>🔍 Click to View Answer</summary>
+
+🧾 **Output:**
+
+```
+42
+```
+
+🧠 **Explanation:**
+
+- The `bind()` method creates a new function with a fixed `this` value and initial arguments
+- `multiple.bind(this, 7)` creates a new function where:
+  - First parameter `x` is permanently set to `7`
+  - Second parameter `y` will be provided when calling `multi()`
+- When we call `multi(6)`:
+  - `x` is `7` (bound value)
+  - `y` is `6` (passed argument)
+  - Returns `7 * 6 = 42`
+  </details>
 
 #
